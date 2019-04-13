@@ -1,5 +1,5 @@
-import { createInterface } from 'readline';
-let rl = createInterface({
+const readline = require('readline');
+let rl = readline.createInterface({
 	input:process.stdin,
 	output:process.stdout
 }); 
@@ -39,7 +39,6 @@ rl.on('line',(line)=>{
 					if(count - last){
 						if(BNC[0]+n-count <= m-1){
 							Beads[nowColor] = 'err';
-							err++;
 						}
 					}
 
